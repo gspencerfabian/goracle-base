@@ -1,0 +1,7 @@
+GSFORA1 =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = gsfora1.np.gspencer.com)(PORT = 1521))
+    (CONNECT_DATA =
+      (SID = GSFORA1)
+    )
+  )
