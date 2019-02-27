@@ -5,7 +5,7 @@
 For use as a base image when building Go apps that require a Oracle database connection
 
 
-## Examples
+### Examples
 Here are two different examples of how to use goracle as a base image. Every implementation of goracle **requires** a tnsnames.ora file in a folder called `app` that is in the same directory as the Dockerfile.
 
 
@@ -40,7 +40,7 @@ slate [oracle_app] ≻ tree
 ```
 
 
-### Basic (using sqlplus)
+#### Basic (using sqlplus)
 **Dockerfile:**
 ```docker
 FROM gspencerfabian/goracle:v0.0.2
@@ -50,7 +50,7 @@ RUN echo "select count(*) from dual;" | sqlplus "<USER>/<PASS>@<SID>"
 You can use `RUN <command>` for inline sqlplus invoking. Alternatively you can use `ENTRYPOINT ["/path/to/bash.sh"]` to execute a bash script.
 
 
-### Advanced (using golang)
+#### Advanced (using golang)
 **Dockerfile:**
 ```docker
 FROM gspencerfabian/goracle:v0.0.2
