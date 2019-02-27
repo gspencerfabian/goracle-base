@@ -3,22 +3,12 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	"log"
-	"os"
 
 	_ "github.com/mattn/go-oci8"
 )
 
-var conn string
-
-func init() {
-	if conn = os.Getenv("CONNECT"); conn == "" {
-		log.Fatal("No environment variable set for CONNECT.")
-	}
-}
-
 func main() {
-	db, err := sql.Open("oci8", conn)
+	db, err := sql.Open("oci8", "spencer/secret123@GSFORA1")
 	if err != nil {
 		panic(err)
 	}
